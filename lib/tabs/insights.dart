@@ -21,8 +21,6 @@ class _InsightsState extends State<Insights> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const SizedBox(),
-        leadingWidth: 2,
         title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

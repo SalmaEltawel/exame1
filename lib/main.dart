@@ -1,6 +1,6 @@
 import 'package:exam/moody_page.dart';
 import 'package:exam/tabs/calender.dart';
-import 'package:exam/tabs/home_tab.dart';
+import 'package:exam/tabs/see_more_tab.dart';
 import 'package:exam/tabs/insights.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: MoodyPage.routeName,
       routes: {
         MoodyPage.routeName:(context)=> MoodyPage(),
-        HomeTab.routeName:(context)=> HomeTab(),
+        SeeMore.routeName:(context)=> SeeMore(),
         Insights.routeName:(context)=> Insights(),
         CalenderTab.routeName:(context)=> CalenderTab(),
 

@@ -2,11 +2,10 @@ import 'package:exam/custom_bottom_navigation.dart';
 import 'package:exam/emojis.dart';
 import 'package:exam/indicator.dart';
 import 'package:exam/tabs/calender.dart';
-import 'package:exam/tabs/home_tab.dart';
+import 'package:exam/tabs/see_more_tab.dart';
 import 'package:exam/tabs/insights.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import 'gridview.dart';
 
 class MoodyPage extends StatefulWidget {
@@ -115,38 +114,43 @@ class _MoodyPageState extends State<MoodyPage> {
               ],
             )),
             Indicator(),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Exercise",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            "See more",
-                            style: TextStyle(
-                                color: Color(0xff027A48),
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            color: Color(0xff027A48),
-                            size: 15,
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context,SeeMore.routeName);
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Exercise",
+                        style:
+                            TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "See more",
+                              style: TextStyle(
+                                  color: Color(0xff027A48),
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              color: Color(0xff027A48),
+                              size: 15,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Column(
@@ -165,14 +169,10 @@ class _MoodyPageState extends State<MoodyPage> {
         label2: "",
         label3: "",
         label4: "",
-        icon1: InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, HomeTab.routeName);
-            },
-            child: Icon(
-              Icons.home,
-              color: Color(0xff027A48),
-            )),
+        icon1: Icon(
+          Icons.home,
+          color: Color(0xff027A48),
+        ),
         icon2: InkWell(
           child: Icon(Icons.grid_view_outlined),
           onTap: () {

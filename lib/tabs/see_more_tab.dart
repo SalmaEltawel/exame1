@@ -3,16 +3,16 @@ import 'package:exam/custom_bottom_navigation.dart';
 import 'package:exam/moody_page.dart';
 import 'package:flutter/material.dart';
 
-class HomeTab extends StatefulWidget {
-  HomeTab({super.key});
+class SeeMore extends StatefulWidget {
+  SeeMore({super.key});
 
   static const String routeName = "homeTab";
 
   @override
-  State<HomeTab> createState() => _HomeTabState();
+  State<SeeMore> createState() => _SeeMoreState();
 }
 
-class _HomeTabState extends State<HomeTab> {
+class _SeeMoreState extends State<SeeMore> {
   int index = 0;
 
   @override
@@ -162,7 +162,7 @@ class _HomeTabState extends State<HomeTab> {
           onTap: () {
             Navigator.pushNamed(context, MoodyPage.routeName);
           },
-            child: Icon(Icons.home)), label1: "",
+            child: Icon(Icons.home,color:Color(0xff027A48))), label1: "",
         icon2: Icon(Icons.navigation),label2: "",
         icon3:  Icon(Icons.bar_chart),label3: "",
         icon4:  Icon(Icons.person),label4: "",
