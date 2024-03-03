@@ -11,8 +11,8 @@ class Emojis extends StatelessWidget {
       children: [
         Column(
           children: [
-            Container(child: Image(image: AssetImage(path))),
-            Text(text,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14)),
+            Image(image: AssetImage(path)),
+            Text(text,style: const TextStyle(fontWeight: FontWeight.w400,fontSize: 14)),
           ],
 
         )
